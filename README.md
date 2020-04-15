@@ -4,7 +4,7 @@
 
 Use the Star Wars API as a data source to complete the below assignments:
 
-https://swapi.co
+https://swapi.dev
 
 You can also use the GraphQL version if you prefer:
 
