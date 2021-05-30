@@ -14,15 +14,16 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        loader: "style-loader!css-loader",
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: "file-loader",
-        options: {
-          publicPath: "images",
-        },
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
       },
     ],
   },
