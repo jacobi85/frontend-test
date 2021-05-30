@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const AppHeader = styled.div`
+const AppHeader = styled.header`
   position: relative;
+  width: 100%;
   height: 800px;
   background-image: url("/images/hero.jpg");
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 `;
 
 const HeaderImageFadeOut = styled.div`
@@ -33,10 +37,11 @@ const HeaderImageFadeOut = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171c22', endColorstr='#171c22',GradientType=0 ); /* IE6-9 */
 `;
 
-const Header = (props) => {
+const Header = ({ children }) => {
   return (
     <AppHeader>
       <HeaderImageFadeOut />
+      {children}
     </AppHeader>
   );
 };

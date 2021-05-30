@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MoviesPage from "./pages/MoviesPage";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <section className="container">content</section>
+      <Header>
+        <MoviesPage />
+      </Header>
       <Footer />
     </div>
   );
