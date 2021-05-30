@@ -1,5 +1,15 @@
 body {
-    background-color: #171C22;
-    color: white;
-    font-size: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: #171c22;
+  color: white;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  min-width: 200px;
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
