@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { StyledContainer } from "../styles/global";
 
 const AppFooter = styled.footer`
-  height: 500px;
+  height: 150px;
   background-color: rgb(31, 39, 44);
 `;
 
