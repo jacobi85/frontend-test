@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledMovieCard = styled.div`
   width: 200px;
@@ -11,9 +12,11 @@ const StyledMovieCard = styled.div`
 
 const MovieCard = ({ movieEpisodeId }) => {
   return (
-    <StyledMovieCard
-      movieUrl={`images/cover/${movieEpisodeId}.jpg`}
-    ></StyledMovieCard>
+    <Link to={`/movie/${movieEpisodeId}`}>
+      <StyledMovieCard
+        movieUrl={`images/cover/${movieEpisodeId}.jpg`}
+      ></StyledMovieCard>
+    </Link>
   );
 };
 
