@@ -8,7 +8,7 @@ const AppStateContext = createContext({});
 export const AppStateProvider = withInitialState(
   ({ children, initialState }) => {
     const [state, dispatch] = useImmerReducer(appStateReducer, initialState);
-    const { movieList } = state;
+    const { movieList, savedCharacters } = state;
 
     const getMovieByEpisodeId = (id) => {
       return movieList.find((movie) => movie.episode_id === parseInt(id));
@@ -16,7 +16,7 @@ export const AppStateProvider = withInitialState(
 
     return (
       <AppStateContext.Provider
-        value={{ movieList, getMovieByEpisodeId, dispatch }}
+        value={{ movieList, savedCharacters, getMovieByEpisodeId, dispatch }}
       >
         {" "}
         {children}

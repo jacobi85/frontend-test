@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { getStarwarsCharacters } from '../api'
 import styled from "styled-components";
 import Loading from "./Loading";
-import { arraySortByValue } from "../utils/arrayUtils";
+import { addSearchItemToLocalHistory } from "../state/actions";
+import { useAppState } from "../state/AppStateContext";
 
 const StyledAutoComplete = styled.div`
 position: relative;
@@ -22,15 +23,16 @@ text-transform: capitalize;
 `;
 
 const StyledDisplay = styled.div`
-border-width: 0px 1px 1px 1px;
+    border-width: 0px 1px 1px 1px;
     border-style: solid;
-    background-color: beige;
+    background-color: white;
     color: black;
     margin-top: -11px;
     width: 207px;
     position: absolute;
     top: 64px;
-    opacity: .8;
+    opacity: 1;
+    z-index:4;
 `;
 
 const StyledDisplayItem = styled.div`
@@ -39,9 +41,8 @@ align-items: center;
 justify-content: space-between;
 padding: 5px;
 cursor: pointer;
-
 &:hover {
-    background-color: white;
+    opacity: .8;
 }
 `;
 
@@ -51,6 +52,8 @@ const AutoComplete = (props) => {
     const [search, setSearch] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
+
+    const { dispatch } = useAppState();
 
     const wrapperRef = useRef(null)
 
@@ -82,7 +85,8 @@ const AutoComplete = (props) => {
     };
 
     const addCharacter = character => {
-        setSearch(character);
+        setSearch("");
+        dispatch(addSearchItemToLocalHistory(character))
         setDisplay(false);
     };
 
@@ -99,7 +103,6 @@ const AutoComplete = (props) => {
     return (
         <StyledAutoComplete ref={wrapperRef}>
             <StyledInputBox
-                id="auto"
                 onClick={() => setDisplay(!display)}
                 placeholder="Search Characters"
                 value={search}

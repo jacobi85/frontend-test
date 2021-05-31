@@ -7,6 +7,7 @@ export function withInitialState(WrappedComponent) {
   return (props) => {
     const [initialState, setInitialState] = useState({
       movieList: [],
+      savedCharacters: [],
     });
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
@@ -16,7 +17,7 @@ export function withInitialState(WrappedComponent) {
         try {
           const { results } = await getStarwarsMovies();
           const sortedResults = arraySortByValue(results, 'episode_id')
-          setInitialState({movieList: sortedResults});
+          setInitialState((prevState) => ({ ...prevState, movieList: sortedResults }));
         } catch (e) {
           setError(e);
         }
