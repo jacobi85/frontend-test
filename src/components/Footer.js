@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { StyledContainer } from "../styles/global";
 
 const AppFooter = styled.footer`
   height: 500px;
@@ -9,7 +10,7 @@ const AppFooter = styled.footer`
 const Footer = (props) => {
   return (
     <AppFooter>
-      <section className="container">footer content</section>
+      <StyledContainer>footer content</StyledContainer>
     </AppFooter>
   );
 };
