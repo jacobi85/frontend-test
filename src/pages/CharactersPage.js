@@ -1,11 +1,11 @@
 import React from "react";
+import AutoComplete from "../components/AutoComplete";
 import { StyledContainer } from "../styles/global";
 
 const CharactersPage = (props) => {
   return (
     <StyledContainer>
-      <section>earch goes here</section>
-      <aside>Results goes here</aside>
+      <AutoComplete />
     </StyledContainer>
   );
 };
