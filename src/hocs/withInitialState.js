@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getStarwarsMovies } from "../api";
 import Loading from '../components/Loading'
+import { arraySortByValue } from "../utils/arrayUtils";
 
 export function withInitialState(WrappedComponent) {
   return (props) => {
@@ -14,7 +15,8 @@ export function withInitialState(WrappedComponent) {
       const fetchInitialState = async () => {
         try {
           const { results } = await getStarwarsMovies();
-          setInitialState({movieList: results});
+          const sortedResults = arraySortByValue(results, 'episode_id')
+          setInitialState({movieList: sortedResults});
         } catch (e) {
           setError(e);
         }
