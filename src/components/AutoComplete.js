@@ -23,12 +23,14 @@ text-transform: capitalize;
 
 const StyledDisplay = styled.div`
 border-width: 0px 1px 1px 1px;
-border-style: solid;
-background-color: beige;
-color: black;
-margin-top: -11px;
-z-index: 3;
-width: 207px;
+    border-style: solid;
+    background-color: beige;
+    color: black;
+    margin-top: -11px;
+    width: 207px;
+    position: absolute;
+    top: 64px;
+    opacity: .8;
 `;
 
 const StyledDisplayItem = styled.div`
@@ -36,6 +38,11 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 5px;
+cursor: pointer;
+
+&:hover {
+    background-color: white;
+}
 `;
 
 const AutoComplete = (props) => {
