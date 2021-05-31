@@ -5,8 +5,7 @@ import { useAppState } from "../state/AppStateContext";
 import { StyledContainer } from "../styles/global";
 
 const MoviePageContainer = styled.section`
-  padding-top: 200px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
