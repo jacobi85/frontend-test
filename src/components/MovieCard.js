@@ -14,7 +14,7 @@ const MovieCard = ({ movieEpisodeId }) => {
   return (
     <Link to={`/movie/${movieEpisodeId}`}>
       <StyledMovieCard
-        movieUrl={`images/cover/${movieEpisodeId}.jpg`}
+        movieUrl={`/images/cover/${movieEpisodeId}.jpg`}
       ></StyledMovieCard>
     </Link>
   );
