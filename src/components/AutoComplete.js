@@ -98,8 +98,6 @@ const AutoComplete = (props) => {
         return <div>{error.message}</div>;
     }
 
-    console.log(characters)
-
     return (
         <StyledAutoComplete ref={wrapperRef}>
             <StyledInputBox
