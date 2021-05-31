@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getStarwarsMovies } from "../api";
+import Loading from '../components/Loading'
 
 export function withInitialState(WrappedComponent) {
   return (props) => {
@@ -23,7 +24,7 @@ export function withInitialState(WrappedComponent) {
     }, []);
 
     if (isLoading) {
-      return <div>Loading</div>;
+      return <Loading />;
     }
 
     if (error) {
