@@ -46,7 +46,7 @@ cursor: pointer;
 }
 `;
 
-const AutoComplete = (props) => {
+const AutoComplete = () => {
     const [display, setDisplay] = useState(false);
     const [characters, setCharacters] = useState([]); // TODO: get from appState instead
     const [search, setSearch] = useState("");

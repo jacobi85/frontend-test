@@ -3,7 +3,7 @@ import AutoComplete from "../components/AutoComplete";
 import SearchHistory from "../components/SearchHistory";
 import { StyledContainer } from "../styles/global";
 
-const CharactersPage = (props) => {
+const CharactersPage = () => {
   return (
     <StyledContainer>
       <AutoComplete />
