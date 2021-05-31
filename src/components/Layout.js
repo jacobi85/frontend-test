@@ -1,15 +1,16 @@
 import React from "react";
 import Footer from "./Footer";
+import Header from "./Header";
 import styled from "styled-components";
 
-const AppLayout= styled.header`
+const AppLayout = styled.header`
   position: relative;
   width: 100%;
   height: 800px;
   background-image: url("/images/hero.jpg");
   background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
 `;
 
 const HeaderImageFadeOut = styled.div`
@@ -41,6 +42,7 @@ const HeaderImageFadeOut = styled.div`
 const Layout = ({ children }) => {
   return (
     <AppLayout>
+      <Header />
       <HeaderImageFadeOut />
       {children}
       <Footer />

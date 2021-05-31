@@ -1,12 +1,12 @@
 import React from "react";
 import { StyledContainer } from "../styles/global";
 
-const MovieDetailPage = (props) => {
+const NotFoundPage = (props) => {
   return (
     <StyledContainer>
-      <section>details</section>
+      <section>Oops! Cannot find the page you are looking for.</section>
     </StyledContainer>
   );
 };
 
-export default MovieDetailPage;
+export default NotFoundPage;

@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const LoadingContainer = styled.div`
- text-align:center;
+  text-align: center;
   margin-top: 1rem;
+  height: 100vh;
 `;
-
 
 const Loading = (props) => {
   return (
