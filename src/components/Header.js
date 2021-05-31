@@ -21,9 +21,9 @@ const Header = (props) => {
   return (
     <AppHeader>
       <StyledContainer>
-        <div>
+        <Link to="/">
           <img src={"images/logo.png"} />
-        </div>
+        </Link>
         <StyledNav>
           <Link to="/" style={{ marginRight: "1rem" }}>
             Movies

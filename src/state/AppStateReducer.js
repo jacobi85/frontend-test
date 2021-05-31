@@ -13,8 +13,10 @@ export const appStateReducer = (draft, action) => {
       });
       break;
     case C.REMOVE_LOCAL_HISTORY_SEARCH_ITEM:
+    
       const itemIndex = findItemIndexByName(draft.savedCharacters, action.payload.name)
-      draft.savedCharacters.splice(itemIndex, 1)
+      if (itemIndex !== -1) draft.savedCharacters.splice(itemIndex, 1)
+      break;
     case C.CLEAR_LOCAL_HISTORY:
       draft.savedCharacters = [];
     default:
