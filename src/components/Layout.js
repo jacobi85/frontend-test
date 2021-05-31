@@ -42,7 +42,7 @@ const HeaderImageFadeOut = styled.div`
 const Layout = ({ children }) => {
   return (
     <AppLayout>
-      <div style={{ "min-height": "800px" }}>
+      <div style={{ minHeight: "800px" }}>
         <Header />
         <HeaderImageFadeOut />
         {children}

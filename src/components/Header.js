@@ -25,7 +25,7 @@ const Header = (props) => {
           <img src={"images/logo.png"} />
         </div>
         <StyledNav>
-          <Link to="/" style={{ "margin-right": "1rem" }}>
+          <Link to="/" style={{ marginRight: "1rem" }}>
             Movies
           </Link>
           <Link to="/characters">Characters</Link>
