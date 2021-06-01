@@ -1,3 +1,6 @@
+# DEMO
+View final app at https://cm-frontend-test.surge.sh/
+
 # Front end developer test
 
 **Don't work more than four hours on this assignment**
