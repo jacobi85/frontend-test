@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "./components/Layout";
 import MoviesPage from "./pages/MoviesPage";
 import CharactersPage from "./pages/CharactersPage";
 import MovieDetailPage from "./pages/MovieDetailPage";

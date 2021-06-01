@@ -9,24 +9,21 @@ const MoviePageContainer = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-
-${media.minWidth("l")`
-justify-content: flex-start;
-`}
+  ${media.minWidth("l")`
+    justify-content: flex-start;
+  `}
 `;
 
 const MoviesPage = () => {
   const { movieList } = useAppState();
-
   if (!movieList) return null;
   return (
     <StyledContainer>
       <MoviePageContainer>
-        {movieList.map((movie) => (
+        {movieList.map(({episode_id}) => (
           <MovieCard
-            key={movie.episode_id}
-            movieEpisodeId={movie.episode_id}
+            key={episode_id}
+            movieEpisodeId={episode_id}
           />
         ))}
       </MoviePageContainer>

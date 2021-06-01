@@ -25,12 +25,12 @@ const StyledCoverImage = styled.img`
   width: 100px;
   height: 150px;
   ${media.minWidth("m")`
-  width: 400px;
-  height: 600px;
+    width: 400px;
+    height: 600px;
   `}
 `;
 
-const MovieDetailPage = (props) => {
+const MovieDetailPage = () => {
   const { episodeId } = useParams();
   const { getMovieByEpisodeId } = useAppState();
 

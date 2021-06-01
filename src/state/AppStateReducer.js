@@ -13,7 +13,6 @@ export const appStateReducer = (draft, action) => {
       });
       break;
     case C.REMOVE_LOCAL_HISTORY_SEARCH_ITEM:
-    
       const itemIndex = findItemIndexByName(draft.savedCharacters, action.payload.name)
       if (itemIndex !== -1) draft.savedCharacters.splice(itemIndex, 1)
       break;

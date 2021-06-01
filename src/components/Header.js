@@ -17,7 +17,7 @@ const StyledNav = styled.div`
   margin-left: 64px;
 `;
 
-const Header = (props) => {
+const Header = () => {
   return (
     <AppHeader>
       <StyledContainer>

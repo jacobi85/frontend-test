@@ -21,7 +21,7 @@ const StyledAppFooterContent = styled.footer`
   }
 `;
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <AppFooter>
       <StyledContainer>

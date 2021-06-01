@@ -6,20 +6,19 @@ import { addSearchItemToLocalHistory } from "../state/actions";
 import { useAppState } from "../state/AppStateContext";
 
 const StyledAutoComplete = styled.div`
-position: relative;
-display:flex;
-flex-direction: column;
-maxWidth: 200px;
-justify-content: center;
-align-items: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 const StyledInputBox = styled.input`
-padding: 10px;
-border: 1px solid purple;
-margin: 10px;
-font-size: 18px;
-text-transform: capitalize;
+    padding: 10px;
+    border: 1px solid purple;
+    margin: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
 `;
 
 const StyledDisplay = styled.div`
@@ -36,14 +35,14 @@ const StyledDisplay = styled.div`
 `;
 
 const StyledDisplayItem = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 5px;
-cursor: pointer;
-&:hover {
-    opacity: .8;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
 `;
 
 const AutoComplete = () => {
@@ -52,9 +51,7 @@ const AutoComplete = () => {
     const [search, setSearch] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
-
     const { dispatch } = useAppState();
-
     const wrapperRef = useRef(null)
 
     useEffect(() => {
@@ -84,10 +81,10 @@ const AutoComplete = () => {
         }
     };
 
-    const addCharacter = character => {
+    const addCharacter = name => {
         setSearch("");
-        dispatch(addSearchItemToLocalHistory(character))
         setDisplay(false);
+        dispatch(addSearchItemToLocalHistory(name))
     };
 
     if (isLoading) {

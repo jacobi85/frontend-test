@@ -7,7 +7,7 @@ const LoadingContainer = styled.div`
   height: 100vh;
 `;
 
-const Loading = (props) => {
+const Loading = () => {
   return (
     <LoadingContainer>
       <img src={"icons/loading.gif"} width={64} height={64} />

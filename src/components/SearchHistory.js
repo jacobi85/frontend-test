@@ -4,25 +4,25 @@ import { clearLocalHistory, removeSearchItemToLocalHistory } from "../state/acti
 import { useAppState } from "../state/AppStateContext";
 
 const StyledSearchHistory = styled.section`
-background-color: rgb(31,39,44);
-padding: 30px;
-position: relative;
+    background-color: rgb(31,39,44);
+    padding: 30px;
+    position: relative;
 `;
 
 const StyledButton = styled.button`
-background-color: #FF370D;
-color: white;
-cursor: pointer;
-border: 1px solid white;
+    background-color: #FF370D;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
 `;
 const StyledClearHistoryButton = styled(StyledButton)`
-position: absolute;
-right: 0;
-top: 20px;
-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    right: 20px;
 `;
 
-const SearchHistory = (props) => {
+const SearchHistory = () => {
     const { dispatch, savedCharacters } = useAppState();
 
     if (savedCharacters?.length === 0) {
